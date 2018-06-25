@@ -6,7 +6,6 @@ body {
      margin: 0px;
      border: solid 10px #fff;
      padding: 0px;
-
      height: 100vh;
 }
 
@@ -19,7 +18,7 @@ footer {
 }
 
 #avocado {
-	 font-size: 7em;
+	 font-size: 6em;
 }
 
 .wrap {
@@ -36,14 +35,7 @@ footer {
     padding: 0 20px;
     text-align: center;
     color: #f7f6a6;	// #3c5116;
-    // text-shadow: 1px 1px 1px #fff;
     border-radius: 10px;
-    /*
-    background-image: linear-gradient(to top left,
-                                      rgba(0, 0, 0, .1),
-                                      rgba(0, 0, 0, .2) 40%,
-                                      rgba(0, 0, 0, 0));
-    */
 				      
     box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .2),
                 inset -2px -2px 3px rgba(0, 0, 0, .3);
@@ -57,7 +49,7 @@ footer {
       text-align:center;
       border: transparent;
       padding:2em;
-      height: 89vh;
+      height: 88vh;
      background: linear-gradient(#f7f6a6, pink);
 }
 
@@ -72,10 +64,107 @@ footer {
        font-size: small;
           text-shadow: 1px 1px 2px #fff;
 	  font-weight: 100;
-  	  // background: linear-gradient(pink, #fdcbc3, pink);
-	  background-color: #fdcbc3;
+	   background-color: #fdcbc3;
 	   margin: 0 auto;
 	   width:75%;
 	   padding: 1em;
 	   border-bottom: 0.5px dotted #fff; 
 }
+
+@media (max-width: 900px) {
+
+       #avocado {
+       		font-size: 3.5em !important;
+		margin-bottom:1em;
+       }
+
+       #pullquote {
+	   font-size:1.75em !important;
+      }
+
+}
+
+@media (max-width: 700px) {
+
+       #avocado {
+       		font-size: 3em !important;
+		margin-bottom:1em;
+       }
+
+       #pullquote {
+	   font-size:1.5em !important;
+      }
+
+}
+
+@media (max-width: 500px) {
+
+       #avocado {
+       		font-size: 2.5em !important;
+		margin-bottom:1em;
+       }
+
+       #pullquote {
+	   font-size:1.5em !important;
+      }
+
+}
+
+@media (max-width: 400px) {
+
+       body {
+       	    border: none !important;
+       }
+
+       #avocado {
+       		font-size: 2em !important;
+		margin-bottom:2em;
+       }
+
+       #pullquote {
+	   font-size:1.2em !important;
+      }
+
+      main {
+      height: 100vh !important;
+      }
+
+
+}
+
+@media (max-width: 320px) {
+
+       body {
+       	    border: none !important;
+       }
+
+       #avocado {
+       		font-size: 1.5em !important;
+		margin-bottom:2.5em;
+       }
+
+       #pullquote {
+	   font-size:1.1em !important;
+      }
+
+      main {
+      height: 100vh !important;
+      }
+
+
+}
+
+/*
+@media (max-width: 1000px) {
+
+       #avocado {
+       		font-size: 4em !important;
+		margin-bottom:2em;
+       }
+
+       #pullquote {
+	   font-size:2em !important;
+      }
+
+}
+*/
