@@ -29,7 +29,7 @@ footer {
      1px 1px 0 #000;
 }
 
-#crush {
+#crush-it {
        border: 0;
     line-height: 2.5;
     padding: 0 20px;
@@ -69,6 +69,23 @@ footer {
 	   width:75%;
 	   padding: 1em;
 	   border-bottom: 0.5px dotted #fff; 
+}
+
+#missioninteger {
+		font-size: 2em;
+		color: #83d0eb;
+		text-shadow: 1px 1px 2px pink;
+		display:none;
+		margin: 2em;
+		font-weight: 700;
+}
+
+#missioninteger:before {
+		       content: "👏 Your new integer is ";
+}
+
+#missioninteger:after {
+		      content: ". What a great number! 👏";
 }
 
 @media (max-width: 900px) {
@@ -153,18 +170,3 @@ footer {
 
 
 }
-
-/*
-@media (max-width: 1000px) {
-
-       #avocado {
-       		font-size: 4em !important;
-		margin-bottom:2em;
-       }
-
-       #pullquote {
-	   font-size:2em !important;
-      }
-
-}
-*/
