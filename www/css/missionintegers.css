@@ -3,8 +3,7 @@ body {
 
      font-family: sans-serif;
      color: #3c5116;
-     margin: 0px;
-     border: solid 10px #fff;
+     margin: 3vw;
      padding: 0px;
      height: 100vh;
 }
@@ -12,9 +11,29 @@ body {
 footer {
 	   margin-top:4em;
 	   position: absolute;
-	   bottom: 6vh;
-	   left: 2vh;
-	   width: 99vw;
+	   top: 80vh;
+	   width:92vw;	 
+	   /* border:solid thin; */
+	   // margin: 0 auto;
+	   text-align: center;
+}
+
+.hey-look {
+	  font-weight: 700;
+}
+
+#motto {
+          text-shadow: 1px 1px 2px #fff;
+	  font-weight: 100;
+	   // background-color: #fdcbc3;
+	   padding-top: 1em;
+	   padding-bottom: 1em;
+	   border-bottom: 0.5px dotted #fff; 
+	   // border:1px solid blue;
+	   width:92vw;
+	   max-width:92vw;
+	   margin:0 auto;
+	   color: #8ba938;
 }
 
 #avocado {
@@ -22,35 +41,37 @@ footer {
 }
 
 .wrap {
-  text-shadow:
-   -1px -1px 0 #000,  
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-     1px 1px 0 #000;
+	text-shadow:
+	-1px -1px 0 #000,  
+	1px -1px 0 #000,
+	-1px 1px 0 #000,
+	1px 1px 0 #000;
 }
 
 #crush-it {
-       border: 0;
-    line-height: 2.5;
-    padding: 0 20px;
-    text-align: center;
-    color: #f7f6a6;	// #3c5116;
-    border-radius: 10px;
+	border: 0;
+	line-height: 2.5;
+	padding: 0 20px;
+	text-align: center;
+	color: #f7f6a6;	// #3c5116;
+	border-radius: 10px;
 				      
-    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .2),
-                inset -2px -2px 3px rgba(0, 0, 0, .3);
+	box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .2),
+        	    inset -2px -2px 3px rgba(0, 0, 0, .3);
 
-     background-color: #759032;	// #f7f6a6;
-     font-size:1.1em;
-     font-weight: 700;
+	background-color: #759032;	// #f7f6a6;
+	font-size:1.1em;
+	font-weight: 700;
 }
 
 #main {
       text-align:center;
-      border: transparent;
-      padding:2em;
-      height: 88vh;
-     background: linear-gradient(#f7f6a6, pink);
+      border-top: 1px solid #f7f6a6;
+      height: 80vh;
+      background: linear-gradient(#f7f6a6, pink);
+      // padding: 2em;
+      y-overflow: scroll;
+      border: 1px solid #83d0eb;
 }
 
 #pullquote {
@@ -60,16 +81,6 @@ footer {
 	   margin-bottom:3em;
 }
 
-#motto {
-       font-size: small;
-          text-shadow: 1px 1px 2px #fff;
-	  font-weight: 100;
-	   background-color: #fdcbc3;
-	   margin: 0 auto;
-	   width:75%;
-	   padding: 1em;
-	   border-bottom: 0.5px dotted #fff; 
-}
 
 #missioninteger {
 		font-size: 2em;
@@ -112,6 +123,14 @@ footer {
 	   font-size:1.5em !important;
       }
 
+      #main {
+      	   padding: 3vw !important;
+	   max-height:70vh !important;
+      }
+
+      footer {
+	     top: 65vh;
+      }
 }
 
 @media (max-width: 500px) {
@@ -129,10 +148,6 @@ footer {
 
 @media (max-width: 400px) {
 
-       body {
-       	    border: none !important;
-       }
-
        #avocado {
        		font-size: 2em !important;
 		margin-bottom:2em;
@@ -142,31 +157,17 @@ footer {
 	   font-size:1.2em !important;
       }
 
-      main {
-      height: 100vh !important;
-      }
-
-
 }
 
 @media (max-width: 320px) {
 
-       body {
-       	    border: none !important;
-       }
-
        #avocado {
-       		font-size: 1.5em !important;
-		margin-bottom:2.5em;
+       		font-size: 2em !important;
+		margin-bottom:1em;
        }
 
        #pullquote {
-	   font-size:1.1em !important;
+	   font-size:1.25em !important;
       }
-
-      main {
-      height: 100vh !important;
-      }
-
 
 }
