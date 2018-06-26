@@ -1,21 +1,62 @@
 body {
-     background-color: #fff;
-
+     background-color: pink;
      font-family: sans-serif;
-     color: #3c5116;
-     margin: 3vw;
+     // color: #3c5116;
+     margin: 1vw;
      padding: 0px;
      height: 100vh;
+     background: linear-gradient(#f7f6a6, pink);
+}
+
+article {
+      text-align:center;
+	       padding: 2vw;
+	       border: .75vw solid #fff;
+	       height:88vh;
+}
+
+header {
+       padding: 0px;
+       margin-top:1rem;
+}
+
+header h1 {
+
 }
 
 footer {
-	   margin-top:4em;
 	   position: absolute;
-	   top: 80vh;
-	   width:92vw;	 
-	   /* border:solid thin; */
-	   // margin: 0 auto;
-	   text-align: center;
+	   bottom: 5vh;
+	   padding: 0px !important;	   
+	   display:block;
+	   left:5vw;
+	   width:90vw;
+	   text-align:center;
+}
+
+#main-text {
+	   height: 20vh !important;
+	   display:block;
+}
+
+#main-text p {
+	   position: relative;
+	   top: 5vh;
+}
+
+#action {
+	   height: 20vh !important;
+	   display:block;
+}
+
+#action button {
+	position: relative;
+	   top: 2vh;
+}
+
+#alt-text {
+	   height: 20vh !important;
+	   display:block;
 }
 
 .hey-look {
@@ -23,21 +64,13 @@ footer {
 }
 
 #motto {
-          text-shadow: 1px 1px 2px #fff;
+          text-shadow: 1px 1px 2px  #8ba938;
 	  font-weight: 100;
-	   // background-color: #fdcbc3;
-	   padding-top: 1em;
-	   padding-bottom: 1em;
-	   border-bottom: 0.5px dotted #fff; 
-	   // border:1px solid blue;
-	   width:92vw;
-	   max-width:92vw;
-	   margin:0 auto;
-	   color: #8ba938;
+	   color: #fff;
 }
 
 #avocado {
-	 font-size: 6em;
+	 font-size: 6rem;
 }
 
 .wrap {
@@ -60,34 +93,24 @@ footer {
         	    inset -2px -2px 3px rgba(0, 0, 0, .3);
 
 	background-color: #759032;	// #f7f6a6;
-	font-size:1.1em;
+	font-size:2rem;
 	font-weight: 700;
 }
 
-#main {
-      text-align:center;
-      border-top: 1px solid #f7f6a6;
-      height: 80vh;
-      background: linear-gradient(#f7f6a6, pink);
-      // padding: 2em;
-      y-overflow: scroll;
-      border: 1px solid #83d0eb;
-}
-
 #pullquote {
-	   font-size:1.5em;
+	   font-size:1.5rem;
 	   font-weight: 700;
 	   text-shadow: 1px 1px 2px #83d0eb;
-	   margin-bottom:3em;
+	   margin-bottom:3rem;
 }
 
 
 #missioninteger {
-		font-size: 2em;
+		font-size: 2rem;
 		color: #83d0eb;
 		text-shadow: 1px 1px 2px pink;
 		display:none;
-		margin: 2em;
+		margin: 2rem;
 		font-weight: 700;
 }
 
@@ -99,17 +122,41 @@ footer {
 		      content: ". What a great number! 👏";
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
 
        #avocado {
-       		font-size: 3.5em !important;
-		margin-bottom:1em;
+       		font-size: 3.5rem !important;
+		margin-bottom:1rem;
+       }
+
+}
+
+@media (max-width: 900px) {
+
+       body {
+       	    padding: 1vh !important;
+       }
+
+       article {
+	       padding: 5vw !important;
+	       border: 2vw solid #fff;
+	       margin-bottom: 4vw !important;
+       }
+
+       #avocado {
+       		font-size: 3rem !important;
+		margin-bottom:1rem;
        }
 
        #pullquote {
 	   font-size:1.75em !important;
       }
 
+      #crush-it {
+      		font-size:1.5rem !important;
+		line-height: 1.5rem !important;
+		padding: 1rem;
+      }
 }
 
 @media (max-width: 700px) {
@@ -120,7 +167,7 @@ footer {
        }
 
        #pullquote {
-	   font-size:1.5em !important;
+	   font-size:1.1em !important;
       }
 
       #main {
@@ -129,7 +176,7 @@ footer {
       }
 
       footer {
-	     top: 65vh;
+	     // top: 65vh;
       }
 }
 
@@ -140,9 +187,10 @@ footer {
 		margin-bottom:1em;
        }
 
-       #pullquote {
-	   font-size:1.5em !important;
-      }
+       #action button {
+	position: relative;
+	   top: 5vh;
+       }
 
 }
 
@@ -153,10 +201,6 @@ footer {
 		margin-bottom:2em;
        }
 
-       #pullquote {
-	   font-size:1.2em !important;
-      }
-
 }
 
 @media (max-width: 320px) {
@@ -166,8 +210,9 @@ footer {
 		margin-bottom:1em;
        }
 
-       #pullquote {
-	   font-size:1.25em !important;
-      }
+       #action button {
+	position: relative;
+	   top: 5vh;
+       }
 
 }
