@@ -17,11 +17,20 @@ article {
 
 header {
        padding: 0px;
-       margin-top:1rem;
+       margin: 0px;
+	   height: 20vh !important;
 }
 
 header h1 {
+       padding: 0px;
+       margin: 0px;
+       margin-top:1.5rem;
+       color: #45413a;
+}
 
+header h1 a {
+       color:#45413a;
+       text-decoration: none;
 }
 
 footer {
@@ -57,6 +66,10 @@ footer {
 #alt-text {
 	   height: 20vh !important;
 	   display:block;
+       color: #45413a;
+       font-style:italic;
+       font-size:small;
+       font-family:monospace;
 }
 
 .hey-look {
@@ -189,7 +202,7 @@ footer {
 
        #action button {
 	position: relative;
-	   top: 5vh;
+	   top: 0vh;
        }
 
 }
@@ -211,8 +224,6 @@ footer {
        }
 
        #action button {
-	position: relative;
-	   top: 5vh;
        }
 
 }
