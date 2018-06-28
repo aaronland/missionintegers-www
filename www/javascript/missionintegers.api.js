@@ -9,6 +9,11 @@ missionintegers.api = (function(){
 		return self.call("/integer", {}, on_success, on_error);
 	    },
 
+	    'ping': function(on_success, on_error){
+
+		return self.call("/ping", {}, on_success, on_error);
+	    },
+
 	    'call': function(method, data, on_success, on_error){
 		
 		var dothis_onsuccess = function(rsp){
