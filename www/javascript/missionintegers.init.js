@@ -8,6 +8,5 @@ window.addEventListener('load', function(e){
 	    console.log("ERROR", rsp);
 	};
 
-	// needs CORS... (20180628/thisisaaronland)
-	// missionintegers.api.call("/ping", {}, on_success, on_error);
+	missionintegers.api.call("/ping", {}, on_success, on_error);
 });
