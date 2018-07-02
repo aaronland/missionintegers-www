@@ -148,6 +148,10 @@ footer {
 		margin-bottom:1rem;
        }
 
+       header h1 {
+       	      padding-top:0px !important;
+       }
+
        #main-text p {
        		       font-size:1.1rem !important;       
        }
