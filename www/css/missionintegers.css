@@ -86,7 +86,7 @@ footer {
        display:block;
        color: #45413a;
        font-style:italic;
-       height: 13vh !important;
+       height: 17vh !important;
        font-family:monospace;
        font-size:1rem;
 }
@@ -138,6 +138,7 @@ footer {
 
 #missioninteger {
 		font-size:3rem !important;
+		margin-top:2.5rem !important;
 }
 
 @media (max-width: 1000px) {
@@ -154,6 +155,10 @@ footer {
        #main-text #missioninteger {
        		       font-size:1rem !important;
        }
+
+       #alt-text {
+              height: 19vh !important;
+	      }	      
 }
 
 @media (max-width: 900px) {
