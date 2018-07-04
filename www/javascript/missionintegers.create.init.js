@@ -1,5 +1,31 @@
 window.addEventListener('load', function(e){
 
+	var messages = {
+	    "warmup": "warming up",
+	    "prep": "all mission integers are prepared serverless-to-table",
+	    "fetch": "fetching your integer",
+	    "trouble": "OH NO!!!!! There was a problem creating your integer!",
+	};
+
+	var b = document.getElementById("crush-it");
+	var m = document.getElementById("missioninteger");
+	var f = document.getElementById("feedback");
+	
+	if (! b){
+	    console.log("Can't find crush-it button");
+	    return false;
+	}
+	
+	if (! m){
+	    console.log("Can't find mission integer target");
+	    return false;
+	}
+	
+	if (! f){
+	    console.log("Can't find feedback target");
+	    return false;
+	}
+	
 	var int2emoji = function(i){
 
 	    var lookup = {
@@ -28,32 +54,17 @@ window.addEventListener('load', function(e){
 	};
 
 	var create = function(){
-
-	    var b = document.getElementById("crush-it");
-	    var m = document.getElementById("missioninteger");
-	    var f = document.getElementById("feedback");
-	    
-	    if (! b){
-		console.log("Can't find crush-it button");
-		return false;
-	    }
-	    
-	    if (! m){
-		console.log("Can't find mission integer target");
-		return false;
-	    }
-	    
-	    if (! f){
-		console.log("Can't find feedback target");
-		return false;
-	    }
 	    
 	    b.onclick = function(){
 		
 		m.innerHTML = "&#160;";
-		f.innerText = "fetching your integer";
+		f.innerText = messages["fetch"];
+
+		whosonfirst.html.css.append_class(f, "spinner");
 		
 		var on_success = function(i){
+		    
+		    whosonfirst.html.css.remove_class(f, "spinner");
 		    
 		    m.style.display = "block";
 		    m.innerText = int2emoji(i);
@@ -66,7 +77,7 @@ window.addEventListener('load', function(e){
 
 		    next.onclick = function(){
 			m.innerText = "";
-			f.innerText = "all mission integers are prepared serverless-to-table";
+			f.innerText = messages["prep"],
 			b.style.display = "block";
 			return false;
 		    };
@@ -80,23 +91,22 @@ window.addEventListener('load', function(e){
 
 		    f.innerHTML = "";
 		    f.appendChild(msg);
-		    // b.removeAttribute("disabled");
 		};
 		
 		var on_error = function(rsp){
-		    f.innerText = "OH NO!!!!! There was a problem creating your integer!";
-		    b.removeAttribute("disabled");
+		    f.innerText = messages["trouble"];
 		};
 		
 		missionintegers.api.call("/integer", {}, on_success, on_error);
 		
 		b.style.display = "none";
-		// b.setAttribute("disabled", "disabled");
 		return false;
 	    };
 	};
 
 	var on_success = function(){
+	    b.style.display = "block";
+	    f.innerText = messages["prep"];
 	    create();
 	};
 

@@ -4,6 +4,9 @@ s3:
 web:
 	utils/darwin/wof-fileserver -path ./www
 
+js-wof:
+	curl -s -o www/javascript/whosonfirst.html.css.js https://raw.githubusercontent.com/whosonfirst/js-whosonfirst/master/src/whosonfirst.html.css.js
+
 icns:
 	if test ! -d app_icon.iconset; then mkdir app_icon.iconset; fi
 	rm -f app_icon.iconset/*.png

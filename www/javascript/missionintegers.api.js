@@ -4,22 +4,10 @@ missionintegers.api = (function(){
 
 	var self = {
 
-	    'integer': function(on_success, on_error){
-
-		return self.call("/integer", {}, on_success, on_error);
-	    },
-
-	    'ping': function(on_success, on_error){
-
-		return self.call("/ping", {}, on_success, on_error);
-	    },
-
 	    'call': function(method, data, on_success, on_error){
 		
 		var dothis_onsuccess = function(rsp){
 		
-		    console.log("SUCCESS", rsp);
-
 		    if (on_success){
 			on_success(rsp);
 		    }
@@ -27,7 +15,7 @@ missionintegers.api = (function(){
 		
 		var dothis_onerror = function(rsp){
 		    
-		    console.log("ERROR", rsp);
+		    console.log("API error", rsp);
 		    
 		    if (on_error){
 			on_error(rsp);
@@ -68,12 +56,12 @@ missionintegers.api = (function(){
 		
 		var onfailed = function(rsp){
 		    
-		    dothis_onerror(self.destruct("connection failed " + rsp));
+		    dothis_onerror(rsp);
 		};
 		
 		var onabort = function(rsp){
 		    
-		    dothis_onerror(self.destruct("connection aborted " + rsp));
+		    dothis_onerror(rsp);
 		};
 		
 		// https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data
@@ -93,7 +81,7 @@ missionintegers.api = (function(){
 		    
 		} catch (e) {
 		    
-		    dothis_onerror(self.destruct("failed to send request, because " + e));
+		    dothis_onerror(rsp);
 		    return false;
 		}
 		
