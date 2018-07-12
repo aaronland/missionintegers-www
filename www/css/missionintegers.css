@@ -149,6 +149,33 @@ footer {
 	 padding-left: 1em;
 }
 
+#posters {
+	 */
+	 width:20%;
+	 max-width:60%;
+	 margin: 0 auto;
+	 */
+	 text-align:center; 
+	 font-size:2rem;
+	 font-weight:700;
+	 margin:0px;
+	 padding:0px;
+	 display:inline-block;
+}
+
+#posters li {
+	 list-style-type: none;
+	 margin-top:1rem;
+}
+
+#posters li a:after {
+	 content: ".pdf";
+	 font-weight: 100;
+	 font-size: .75rem;
+	 display:block;
+	 color: #45413a;
+}
+
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 @media (max-width: 1000px) {
